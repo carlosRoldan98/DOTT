@@ -33,7 +33,7 @@ pipeline {
             steps {
                 echo 'Unit testing'
                 sh '''
-                go --version
+                go version
                 '''
             
             }
