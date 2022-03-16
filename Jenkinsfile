@@ -1,11 +1,16 @@
 pipeline {
     agent any
-   tools {
-        go 'go-1.15'
+    node {
+    // Ensure the desired Go version is installed
+    def root = tool type: 'go', name: 'Go 1.15'
+
+    // Export environment variables pointing to the directory where Go was installed
+    withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"]) {
+        sh 'go version'
     }
+}
     environment {
     SCANNER_HOME= tool 'sonar'
-    GO115MODULE = 'on'
     }
 
     stages {
@@ -32,9 +37,7 @@ pipeline {
         stage('Unit Test'){
             steps {
                 echo 'Unit testing'
-                sh '''
-                go --version
-                '''
+            
             }
         }
         stage('Deploy') {
