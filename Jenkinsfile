@@ -26,7 +26,7 @@ pipeline {
             }
         }
         stage('Unit Test')
-            steps {
+            steps  {
                 echo 'Unit testing'
             }
         stage('Deploy') {
