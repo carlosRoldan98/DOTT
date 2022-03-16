@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    tools {
-        go 'go1.15'
+   tools {
+        go 'go-1.15'
     }
     environment {
     SCANNER_HOME= tool 'sonar'
