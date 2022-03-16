@@ -15,7 +15,7 @@ pipeline {
                 sonar-scanner \
                     -Dsonar.organization=carlosroldan98 \
                     -Dsonar.projectKey=carlosRoldan98_DOTT \
-                    -Dsonar.sources=./cidr_convert/go
+                    -Dsonar.sources=. \
                     -Dsonar.host.url=https://sonarcloud.io
                     '''
             }
