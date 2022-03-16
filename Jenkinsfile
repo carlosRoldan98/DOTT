@@ -34,8 +34,9 @@ pipeline {
                 echo 'Unit testing'
                 sh '''
                 go version
+                
                 cd ./cidr_convert_api/go/
-                go run convert_test.go
+                go test convert_test.go
                 
                 '''
             
