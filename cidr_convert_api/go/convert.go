@@ -10,10 +10,6 @@ func maskToCidr(value string) string {
 }
 
 func ipv4Validation(value string) bool {
-	lll
 	return true
-	kkkk
 }
 
-
-hhhh
