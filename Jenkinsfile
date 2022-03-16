@@ -1,7 +1,11 @@
 pipeline {
     agent any
+    tools {
+        go 'go1.15'
+    }
     environment {
     SCANNER_HOME= tool 'sonar'
+    GO115MODULE = 'on'
     }
 
     stages {
@@ -28,6 +32,9 @@ pipeline {
         stage('Unit Test'){
             steps {
                 echo 'Unit testing'
+                sh '''
+                go --version
+                '''
             }
         }
         stage('Deploy') {
