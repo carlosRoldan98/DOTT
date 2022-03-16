@@ -35,8 +35,8 @@ pipeline {
                 sh '''
                 go version
                 cd ./cidr_convert_api/go/
-                go get Goopfile
-                go convert_test.go
+                go run convert_test.go
+                
                 '''
             
             }
