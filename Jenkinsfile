@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Testing.....'
                 sh''' 
-                cd ./cidr_convert/go
+                cd ./cidr_convert_api/go
                 sonar-scanner \
                     -Dsonar.organization=carlosroldan98 \
                     -Dsonar.projectKey=carlosRoldan98_DOTT \
