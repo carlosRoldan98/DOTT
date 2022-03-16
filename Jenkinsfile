@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    
+    environment {
+    SCANNER_HOME= tool 'sonar'
+    }
 
     stages {
         stage('Build') {
@@ -14,7 +16,7 @@ pipeline {
                 withSonarQubeEnv('sonar') { 
                     sh''' 
                     cd ./cidr_convert_api/go
-                    sonar-scanner \
+                    ${SCANNER_HOME}sonar-scanner \
                         -Dsonar.organization=carlosroldan98 \
                         -Dsonar.projectKey=carlosRoldan98_DOTT \
                         -Dsonar.sources=. \
