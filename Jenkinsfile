@@ -34,6 +34,9 @@ pipeline {
                 echo 'Unit testing'
                 sh '''
                 go version
+                cd ./cidr_convert_api/go/
+                go install Goopfile
+                go convert_test.go
                 '''
             
             }
