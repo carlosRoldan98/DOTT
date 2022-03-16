@@ -4,10 +4,8 @@ pipeline {
         go 'go-1.18'
     }
     environment {
+        SCANNER_HOME= tool 'sonar'
         GO118MODULE = 'on'
-    }
-    environment {
-    SCANNER_HOME= tool 'sonar'
     }
 
     stages {
