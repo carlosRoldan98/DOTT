@@ -25,6 +25,10 @@ pipeline {
                 }
             }
         }
+        stage('Unit Test')
+            steps {
+                echo 'Unit testing'
+            }
         stage('Deploy') {
             steps {
                 echo 'Deploying.....'
