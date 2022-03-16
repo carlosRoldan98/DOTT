@@ -11,11 +11,11 @@ pipeline {
             steps {
                 echo 'Testing.....'
                 sh''' 
-                cd ./cikdr_convert/go
+                cd ./cidr_convert/go
                 sonar-scanner \
                     -Dsonar.organization=carlosroldan98 \
                     -Dsonar.projectKey=carlosRoldan98_DOTT \
-                    -Dsonar.sources=. \
+                    -Dsonar.sources=. \./cidr_convert/go
                     -Dsonar.host.url=https://sonarcloud.io
                     '''
             }
