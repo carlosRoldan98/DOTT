@@ -34,11 +34,11 @@ pipeline {
                 echo 'Unit testing'
               sh '''
 		cd ./cidr_convert_api/go/
-		go version
-                go get github.com/stretchr/testify/assert
+		go version     
                 go get github.com/Pepegasca/goop
-               
-                go build convert_test.go
+                goop install
+               ls
+                go test convert_test.go
                 
          	'''
             
