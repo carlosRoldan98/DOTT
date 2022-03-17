@@ -32,16 +32,15 @@ pipeline {
         stage('Unit Test'){
             steps {
                 echo 'Unit testing'
-              sh '''
+             sh '''
 		cd ./cidr_convert_api/go/
 		go version     
-                go get github.com/Pepegasca/goop
+                get github.com/nitrous-io/goop
+		ls
                 goop install
-               ls
+                ls
                 go test convert_test.go
-                
-         	'''
-            
+        	'''
             }
         }
         stage('Deploy') {
