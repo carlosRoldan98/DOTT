@@ -34,7 +34,9 @@ pipeline {
                 echo 'Unit testing'
                 sh '''
                 go version
-                go install github.com/Pepegasca/goop@latest
+                go install github.com/gorilla/mux@latest
+                go install github.com/pkg/errors@latest
+                go install github.com/stretchr/testify/assert@latest
                 cd ./cidr_convert_api/go/
                 go test convert_test.go
                 
