@@ -36,7 +36,7 @@ pipeline {
                 go version
                 go get github.com/Pepegasca/goop
                 cd ./cidr_convert_api/go/
-                go install Goopfile
+                go test convert_test.go
                 
                 '''
             
