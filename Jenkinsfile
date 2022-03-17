@@ -39,7 +39,7 @@ pipeline {
 		ls
                 goop install
                 ls
-                go test convert_test.go
+                go test 
                 
          	'''
             }
