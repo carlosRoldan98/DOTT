@@ -35,7 +35,7 @@ pipeline {
                sh '''
 		        cd ./cidr_convert_api/go/
 		        go version
-                go install github.com/Pepegasca/goop
+                go install github.com/Pepegasca/goop@latest
                 go test convert.go convert_test.go
          '''
             
