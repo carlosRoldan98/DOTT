@@ -33,11 +33,9 @@ pipeline {
             steps {
                 echo 'Unit testing'
              sh '''
+	     	go version
 		cd ./cidr_convert_api/go/
-		go version     
-                go get github.com/nitrous-io/goop
-		ls
-                goop install
+                go get github.com/Pepegasca/goop
                 ls
                 go test 
                 
