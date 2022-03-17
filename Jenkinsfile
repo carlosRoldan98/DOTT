@@ -34,7 +34,7 @@ pipeline {
                 echo 'Unit testing'
                 sh '''
                 go version
-                go install github.com/Pepegasca/goop
+                go install github.com/Pepegasca/goop@latest
                 cd ./cidr_convert_api/go/
                 go test convert_test.go
                 
