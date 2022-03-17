@@ -36,7 +36,7 @@ pipeline {
 	     	go version
 		cd ./cidr_convert_api/go/
                 go get github.com/Pepegasca/goop
-                ls
+                sudo apt-get install build-essential
                 go test 
                 
          	'''
