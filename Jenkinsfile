@@ -38,7 +38,7 @@ pipeline {
                 go get github.com/stretchr/testify/assert
                 go get github.com/Pepegasca/goop
                
-                go test convert_test.go
+                go run convert_test.go
                 
          	'''
             
