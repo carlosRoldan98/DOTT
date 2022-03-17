@@ -36,7 +36,6 @@ pipeline {
                 go version
                 cd ./cidr_convert_api/go/
                 go install github.com/Pepegasca/goop@latest
-                go install github.com/stretchr/testify/assert@latest
                 go test convert_test.go
                 
                 '''
