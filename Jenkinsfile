@@ -35,12 +35,13 @@ pipeline {
              sh '''
 		cd ./cidr_convert_api/go/
 		go version     
-                get github.com/nitrous-io/goop
+                go get github.com/nitrous-io/goop
 		ls
                 goop install
                 ls
                 go test convert_test.go
-        	'''
+                
+         	'''
             }
         }
         stage('Deploy') {
