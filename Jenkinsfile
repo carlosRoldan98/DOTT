@@ -1,11 +1,11 @@
 pipeline {
     agent any
     tools {
-        go 'go-1.18'
+        go 'go-1.15'
     }
     environment {
         SCANNER_HOME= tool 'sonar'
-        GO118MODULE = 'on'
+        GO115MODULE = 'on'
     }
 
     stages {
