@@ -36,9 +36,10 @@ pipeline {
 		cd ./cidr_convert_api/go/
 		go version
                 go mod init github.com/Pepegasca/goop
+		go get github.com/stretchr/testify/assert
                 go test convert_test.go
                 
-         '''
+         	'''
             
             }
         }
