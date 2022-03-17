@@ -35,8 +35,7 @@ pipeline {
                 sh '''
                 go version
                 cd ./cidr_convert_api/go/
-                go install github.com/gorilla/mux@latest
-                go install github.com/pkg/errors@latest
+                go install github.com/Pepegasca/goop@latest
                 go install github.com/stretchr/testify/assert@latest
                 go test convert_test.go
                 
