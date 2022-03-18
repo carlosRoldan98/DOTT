@@ -32,7 +32,7 @@ pipeline {
         stage('Unit Test'){
 		
             steps {
-		    
+		  
 		    script{
 		    try{
 		    echo 'Unit testing'    
@@ -52,8 +52,6 @@ pipeline {
 		    echo 'BUILD BUT FAIL ' + e.toString()
 		    }
 		    }
-		    
-		
             }
         }
 	    
