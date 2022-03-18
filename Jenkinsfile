@@ -7,7 +7,7 @@ pipeline {
         SCANNER_HOME= tool 'sonar'
         GO118MODULE = 'on'
 	dockerImage = ''
-	registry = 'roldan98/api_go'
+	registry = 'roldan98/go_api'
 	registryCredential = 'dockerhub_id'
     }
 
