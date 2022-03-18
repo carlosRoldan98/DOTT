@@ -35,7 +35,8 @@ pipeline {
              sh '''
 	     	go version
 		cd ./cidr_convert_api/go/
-                go get Goopfile
+                go get github.com/gorilla/mux
+		go get github.com/stretchr/testify/assert
                 go test 
                 
          	'''
