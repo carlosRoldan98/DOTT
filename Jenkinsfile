@@ -1,11 +1,11 @@
 pipeline {
     agent any
     tools {
-        go 'go-1.15'
+        go 'go-1.18'
     }
     environment {
         SCANNER_HOME= tool 'sonar'
-        GO115MODULE = 'on'
+        GO118MODULE = 'on'
     }
 
     stages {
@@ -35,8 +35,8 @@ pipeline {
 		    dir(path: 'cidr_convert_api/go/'){
 		    sh '''
 			go version
-			apk add --update git
-			apk add build-base
+			
+			go get build-base
 			go get github.com/karmakaze/goop \\
 			&& go get github.com/gorilla/mux \\
 			&& go get github.com/stretchr/testify/assert \\
