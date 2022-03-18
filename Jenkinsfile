@@ -60,16 +60,25 @@ pipeline {
 	    
 	    
 	    stage('Build Image'){
-	    	 script {
+		    steps{
+		     script {
           		dockerImage = docker.build registry
         		}
+		    }
+		    
+	    	
 	    }
+	    
 	    stage('Uploading Image'){
-		    script{
-		    docker.withRegistry( '', registryCredential ) {
-            	    dockerImage.push()
+		    steps{
+			    script{
+			    docker.withRegistry( '', registryCredential ) {
+			    dockerImage.push()
+			    }
+			    }
 		    }
-		    }
+		    
+		    
 	    }
 			  
 	    
