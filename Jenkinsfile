@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         go 'go-1.18'
-	docker 'latest'
+	dockerTool 'latest'
 	    
     }
     environment {
