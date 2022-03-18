@@ -82,10 +82,10 @@ pipeline {
 			    dockerImage.push()
 			    }
 			    }
-		    }
+		    }  
 		    
 		    
-	    }
+	       }
 			  
 	    
 	    
