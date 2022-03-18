@@ -36,7 +36,7 @@ pipeline {
 		echo 'Unit testing'    
 		    
 		    dir(path: 'cidr_convert_api/go/'){
-			sh ("apt-get install build-essential")    
+			sh (" sudo apt-get install build-essential")    
 		    sh '''
 			go version
 			
