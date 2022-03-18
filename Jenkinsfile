@@ -6,6 +6,9 @@ pipeline {
     environment {
         SCANNER_HOME= tool 'sonar'
         GO118MODULE = 'on'
+	dockerImage = ''
+	registry = 'roldan98/api_go'
+	registryCredential = 'dockerhub_id'
     }
 
     stages {
@@ -56,9 +59,28 @@ pipeline {
         }
 	    
 	    
+	    stage('Build Image){
+	    	 script {
+          		dockerImage = docker.build registry
+        		}
+	    }
+	    stage('Uploading Image'){
+		    script{
+		    docker.withRegistry( '', registryCredential ) {
+            	    dockerImage.push()
+		    }
+		    }
+	    }
+			  
+	    
+	    
         stage('Deploy') {
             steps {
-                echo 'Deploying.....'
+		   
+               
+		    
+		    echo 'Deploy.......'  
+		    
             }
         }
     }
