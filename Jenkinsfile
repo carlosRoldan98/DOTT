@@ -38,7 +38,6 @@ pipeline {
 		go get github.com/karmakaze/goop \\
     		&& go get github.com/gorilla/mux \\
     		&& go get github.com/stretchr/testify/assert \\
-   		&& goop install
                 go test 
                 
          	'''
