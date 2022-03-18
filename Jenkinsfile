@@ -32,6 +32,8 @@ pipeline {
         stage('Unit Test'){
 		
             steps {
+		    
+		    script{
 		    try{
 		    echo 'Unit testing'    
 		    
@@ -49,9 +51,13 @@ pipeline {
 		    }catch(Exception e){
 		    echo 'BUILD BUT FAIL' + e.toString()
 		    }
+		    }
+		    
 		
             }
         }
+	    
+	    
         stage('Deploy') {
             steps {
                 echo 'Deploying.....'
