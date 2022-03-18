@@ -2,6 +2,7 @@ pipeline {
     agent any
     tools {
         go 'go-1.18'
+	    
     }
     environment {
         SCANNER_HOME= tool 'sonar'
@@ -63,7 +64,7 @@ pipeline {
 		    steps{
 		     script {
 			     sh '''
-			docker version   
+			docker --version   
 			'''
           		dockerImage = docker.build registry
         		}
