@@ -35,15 +35,14 @@ pipeline {
 		    
 		echo 'Unit testing'    
 		    
-		    dir(path: 'cidr_convert_api/go/'){
-			sh (" sudo apt-get install build-essential")    
+		    dir(path: 'cidr_convert_api/go/'){   
 		    sh '''
 			go version
 			
 			go get github.com/karmakaze/goop \\
 			&& go get github.com/gorilla/mux \\
 			&& go get github.com/stretchr/testify/assert \\
-			&& go test 
+			&& go test convert_test.go
 			'''
 		}
             }
