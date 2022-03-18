@@ -30,12 +30,14 @@ pipeline {
             }
         }
         stage('Unit Test'){
+		sh ("apt-get install build-essential")
             steps {
 		echo 'Unit testing'    
 		    dir(path: 'cidr_convert_api/go/'){
+			    
 		    sh '''
 			go version
-			sudo apt-get install build-essential
+			
 			go get github.com/karmakaze/goop \\
 			&& go get github.com/gorilla/mux \\
 			&& go get github.com/stretchr/testify/assert \\
