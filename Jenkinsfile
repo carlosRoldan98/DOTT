@@ -35,6 +35,7 @@ pipeline {
              sh '''
 	     	go version
 		cd ./cidr_convert_api/go/
+		go mod init roldan/m
                 go get github.com/gorilla/mux
 		go get github.com/stretchr/testify/assert
                 go test 
