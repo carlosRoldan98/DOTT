@@ -62,8 +62,6 @@ pipeline {
 	    stage('Build Image'){
 		    steps{
 		     script {
-			def dockerHome = tool 'myDocker'
-			env.PATH = "${dockerHome}/bin:${env.PATH}"
           		dockerImage = docker.build registry
         		}
 		    }
