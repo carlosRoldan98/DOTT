@@ -31,6 +31,7 @@ pipeline {
         }
         stage('Unit Test'){
             steps {
+		    dir(path: 'cidr_convert_api/go/')
                 echo 'Unit testing'
              sh '''
 	     	go version
