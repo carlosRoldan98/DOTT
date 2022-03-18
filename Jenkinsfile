@@ -49,7 +49,7 @@ pipeline {
 			}
 		    
 		    }catch(Exception e){
-		    echo 'BUILD BUT FAIL' + e.toString()
+		    echo 'BUILD BUT FAIL ' + e.toString()
 		    }
 		    }
 		    
