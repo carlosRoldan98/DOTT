@@ -1,11 +1,11 @@
 pipeline {
     agent any
     tools {
-        go 'go-1.18'
+        go 'go-1.10'
     }
     environment {
         SCANNER_HOME= tool 'sonar'
-        GO118MODULE = 'on'
+        GO110MODULE = 'on'
     }
 
     stages {
@@ -36,7 +36,6 @@ pipeline {
 	     	go version
 		cd ./cidr_convert_api/go/
                 go get github.com/Pepegasca/goop
-                apt-get install build-essential
                 go test 
                 
          	'''
