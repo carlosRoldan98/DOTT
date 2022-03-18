@@ -66,8 +66,10 @@ pipeline {
 			     sh '''
 			docker --version   
 			'''
+			 dir(path: 'cidr_convert_api/go/'){
           		dockerImage = docker.build registry
         		}
+		     }
 		    }
 		    
 	    	
