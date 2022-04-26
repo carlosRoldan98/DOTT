@@ -30,7 +30,7 @@ pipeline {
                         -Dsonar.host.url=https://sonarcloud.io '''
                 }
             }
-        }
+        
         stage('Deployingggg') {
             steps {
                 echo 'Deploying....'
