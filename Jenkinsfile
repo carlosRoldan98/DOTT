@@ -21,6 +21,7 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'SonarCloud'
+                sh ' cd cidr_convert_api/python/ '
                  sh '''withSonarQubeEnv('sonarDOTT') {
                     sonar-scanner \
                         -Dsonar.organization=carlosroldan98 \
