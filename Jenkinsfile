@@ -21,12 +21,12 @@ pipeline {
         stage('Sonar') {
             steps {
                 echo 'SonarCloud'
-                withSonarQubeEnv('sonarDOTT') {
+                 sh '''withSonarQubeEnv('sonarDOTT') {
                     sonar-scanner \
                         -Dsonar.organization=carlosroldan98 \
                         -Dsonar.projectKey=carlosRoldan98_DOTT \
                         -Dsonar.sources=. \
-                        -Dsonar.host.url=https://sonarcloud.io
+                        -Dsonar.host.url=https://sonarcloud.io '''
                 }
             }
         }
